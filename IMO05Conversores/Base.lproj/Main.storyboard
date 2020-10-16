@@ -53,6 +53,9 @@
                                         <state key="normal" title="Celsius">
                                             <color key="titleColor" systemColor="opaqueSeparatorColor"/>
                                         </state>
+                                        <connections>
+                                            <action selector="Conversor:" destination="BYZ-38-t0r" eventType="touchUpInside" id="M6b-rE-UZn"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ABF-l0-Lh3">
                                         <rect key="frame" x="209" y="298" width="122" height="54"/>
@@ -61,6 +64,9 @@
                                         <state key="normal" title="Farenheint">
                                             <color key="titleColor" systemColor="opaqueSeparatorColor"/>
                                         </state>
+                                        <connections>
+                                            <action selector="Conversor:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xyQ-YV-1EH"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="linkColor"/>

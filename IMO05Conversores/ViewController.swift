@@ -24,6 +24,10 @@ class ViewController: UIViewController {
 
     @IBAction func showNext(_ sender: UIButton) {
     }
+
+    
+    @IBAction func Conversor(_ sender: UIButton) {
+    }
     
 }
 
