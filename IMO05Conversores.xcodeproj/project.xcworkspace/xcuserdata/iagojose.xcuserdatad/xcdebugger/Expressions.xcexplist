@@ -3,6 +3,14 @@
    version = "1.0">
    <ContextStates>
       <ContextState
+         contextName = "ViewController.calcTemperature():ViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "lbResult.text">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "ViewController.Conversor(_:):ViewController.swift">
          <PersistentStrings>
             <PersistentString

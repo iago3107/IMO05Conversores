@@ -71,12 +71,12 @@ class ViewController: UIViewController {
         }
         view.endEditing(true)
         
-        let result = String(lbResult.text!)
+        let result = Double(lbResult.text!)!
         lbResult.text = String(format: "%.2f", result)
         lbResult.text = lbResult.text!.replacingOccurrences(of: ".", with: ",")
     }
     func calcTemperature()  {
-        guard let temperature = Double(tfValue.text!) else {return}
+        guard let temperature = Double((tfValue.text!).replacingOccurrences(of: ",", with: ".")) else {return}
         if btUnit1.alpha == 1.0{
             lbResultUnit.text = "Farenheint"
             lbResult.text = String(temperature * 1.8 + 32.0)
@@ -87,7 +87,7 @@ class ViewController: UIViewController {
     }
     
     func calcWeight()  {
-        guard let weight = Double(tfValue.text!) else {return}
+        guard let weight = Double((tfValue.text!).replacingOccurrences(of: ",", with: ".")) else {return}
         if btUnit1.alpha == 1.0{
             lbResultUnit.text = "Libra"
             lbResult.text = String(weight / 2.2046)
@@ -97,7 +97,7 @@ class ViewController: UIViewController {
         }
     }
     func calcCurrency(){
-        guard let currency = Double(tfValue.text!) else {return}
+        guard let currency = Double((tfValue.text!).replacingOccurrences(of: ",", with: ".")) else {return}
         if btUnit1.alpha == 1.0{
             lbResultUnit.text = "Dólar"
             lbResult.text = String(currency / 5.2)
@@ -107,7 +107,7 @@ class ViewController: UIViewController {
         }
     }
     func calcDistance() {
-        guard let distance = Double(tfValue.text!) else {return}
+        guard let distance = Double((tfValue.text!).replacingOccurrences(of: ",", with: ".")) else {return}
         if btUnit1.alpha == 1.0{
             lbResultUnit.text = "Quilômetro"
             lbResult.text = String(distance / 1000.0)
