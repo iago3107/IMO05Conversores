@@ -22,6 +22,15 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         tfValue.text = ""
+        
+        btUnit1.titleLabel?.numberOfLines = 1
+        btUnit1.titleLabel?.adjustsFontSizeToFitWidth = true
+        btUnit1.titleLabel?.lineBreakMode = .byClipping //<-- MAGIC LINE
+        
+        btUnit2.titleLabel?.numberOfLines = 1
+        btUnit2.titleLabel?.adjustsFontSizeToFitWidth = true
+        btUnit2.titleLabel?.lineBreakMode = .byClipping //<-- MAGIC LINE
+
     }
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         view.endEditing(true)
@@ -71,7 +80,7 @@ class ViewController: UIViewController {
         }
         view.endEditing(true)
         
-        let result = Double(lbResult.text!)!
+        let result = lbResult.text!.isEmpty ? Double("0.0")! : Double((lbResult.text!).replacingOccurrences(of: ",", with: "."))!
         lbResult.text = String(format: "%.2f", result)
         lbResult.text = lbResult.text!.replacingOccurrences(of: ".", with: ",")
     }
